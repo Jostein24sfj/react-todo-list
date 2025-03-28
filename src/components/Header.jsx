@@ -22,18 +22,22 @@ export default function Header({
   return (
     <>
       <div className="headerInput">
-        <h1>TODO List</h1>
+        <h1>
+          TODO LIST<b>.</b>
+        </h1>
         <form onSubmit={handleAddTask}>
           {" "}
-          <input
-            type="text"
-            onChange={(e) => setNewTaskName(e.target.value)}
-            style={{ padding: "8px" }}
-          />
-          <button type="submit" style={{ padding: "8px" }}>
-            {" "}
-            Submit Task
-          </button>
+          <div className="searchBar">
+            <input
+              type="text"
+              onChange={(e) => setNewTaskName(e.target.value)}
+              style={{ padding: "8px" }}
+            />
+            <button type="submit" style={{ padding: "8px" }}>
+              {" "}
+              Submit Task
+            </button>
+          </div>
         </form>
         <select
           value={sortOption.sortBy}
